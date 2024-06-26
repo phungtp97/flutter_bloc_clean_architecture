@@ -25,18 +25,18 @@ import 'package:flutter_bloc_arch/feature/application/usecase/user/login_user.da
     as _i13;
 import 'package:flutter_bloc_arch/feature/application/usecase/user/register_user.dart'
     as _i14;
-import 'package:flutter_bloc_arch/feature/data/data.dart' as _i8;
-import 'package:flutter_bloc_arch/feature/data/datasource/local/locale_local_data_source.dart'
-    as _i10;
-import 'package:flutter_bloc_arch/feature/data/datasource/remote/user_remote_data_source.dart'
-    as _i5;
-import 'package:flutter_bloc_arch/feature/data/repository/locale_repository_iml.dart'
-    as _i12;
-import 'package:flutter_bloc_arch/feature/data/repository/user_repository_iml.dart'
-    as _i7;
 import 'package:flutter_bloc_arch/feature/domain/domain.dart' as _i6;
 import 'package:flutter_bloc_arch/feature/domain/repository/local_repository.dart'
     as _i11;
+import 'package:flutter_bloc_arch/feature/infrastructure/infrastructure.dart' as _i8;
+import 'package:flutter_bloc_arch/feature/infrastructure/datasource/local/locale_local_data_source.dart'
+    as _i10;
+import 'package:flutter_bloc_arch/feature/infrastructure/datasource/remote/user_remote_data_source.dart'
+    as _i5;
+import 'package:flutter_bloc_arch/feature/infrastructure/repository/locale_repository_iml.dart'
+    as _i12;
+import 'package:flutter_bloc_arch/feature/infrastructure/repository/user_repository_iml.dart'
+    as _i7;
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart' as _i2;
 import 'package:shared_preferences/shared_preferences.dart' as _i4;

@@ -5,7 +5,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../../shared/extension/extension.dart';
 import '../../../../core/core.dart';
-import '../../data.dart';
+import '../../infrastructure.dart';
 
 abstract class UserRemoteDataSource {
   Future<Either<Failure, UserModel>> login(String username, String password);

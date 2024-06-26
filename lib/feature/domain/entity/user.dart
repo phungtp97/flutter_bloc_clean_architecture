@@ -1,4 +1,4 @@
-import '../../data/data.dart';
+import '../../infrastructure/infrastructure.dart';
 
 class UserEntity {
   final String id;

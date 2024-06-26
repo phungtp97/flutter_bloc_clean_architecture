@@ -1,48 +1,47 @@
-# flutter_bloc_arch
+# Flutter Bloc Clean Architecture
 
-A Flutter project to show a practice example of Bloc Clean Architecture
+A boilerplate project to demonstrate the implementation of Clean Architecture using Bloc in Flutter. This repository is designed to serve as a starting point for Flutter developers who want to implement Clean Architecture principles in their applications.
 
-## Clean Architecture
+## Table of Contents
+- [Introduction](#introduction)
+- [Features](#features)
+- [Project Structure](#project-structure)
+- [Getting Started](#getting-started)
+- [Dependencies](#dependencies)
+- [Contributing](#contributing)
+- [License](#license)
 
-This project is structured following the principles of Clean Architecture. This architecture is designed to separate concerns, making the system more understandable, flexible, and maintainable. Here are some aspects of Clean Architecture that can be observed in the provided code:
+## Introduction
+This project is a practical example of using Clean Architecture with the Bloc state management library in Flutter. Clean Architecture aims to separate concerns, making the system more understandable, flexible, and maintainable.
 
-1. **Separation of Concerns:** The project is divided into different layers, each with its own responsibility. For example, the `UserRepositoryIml` class is part of the domain layer and is responsible for business logic, while the `UserRemoteDataSource` is part of the data layer and is responsible for data retrieval.
-
-2. **Dependency Rule:** The inner layers of the system should not depend on the outer layers. This is evident in the `UserRepositoryIml` class, which depends on abstractions (`UserRemoteDataSource`) rather than on concrete implementations.
-
-3. **Use of Interfaces:** Interfaces are used to define the protocols for communication between different layers of the system. For example, `UserRepositoryIml` is an implementation of the `UserRepository` interface.
-
-4. **Inversion of Control:** The project uses dependency injection (as indicated by the `@LazySingleton` annotation), which is a technique that helps to invert the control. This means that the control of objects is taken out of the hands of the classes and moved to a central place in the system.
-
-5. **Error Handling:** The project uses the `Either` type from the `dartz` package for error handling. This is a functional programming concept that allows you to work with two types of objects (like success and failure) in a clean and predictable way.
-
-6. **Localization:** The project has a `LocaleBuilder` class that helps to manage different locales. This is a good practice for supporting multiple languages in the application.
-
-Remember, the goal of Clean Architecture is to make the system easy to understand, develop, test, and maintain. It's not about the specific tools or frameworks you use, but rather about how you structure your code.
+## Features
+- **Separation of Concerns**: Divides the project into data, domain, and presentation layers.
+- **Dependency Injection**: Uses `injectable` and `get_it` for managing dependencies.
+- **Error Handling**: Implements `Either` type from the `dartz` package for functional error handling.
+- **Localization**: Supports multiple languages with a `LocaleBuilder` class.
 
 ## Project Structure
+The project is structured into three main layers:
 
-This project follows the principles of Clean Architecture and is divided into three main layers:
+1. **Infrastructure Layer**: Data-getter Layer. handles data operations such as network requests, database access, and data caching, and repository implementation.
 
-1. **Data Layer:** This layer is responsible for handling all data-related operations such as network requests, database access, and data caching. It includes classes like `UserRemoteDataSource` and `LocaleRepositoryIml`.
 
     ```
     lib/
     └── feature/
-        └── data/
+        └── infrastructure/
             ├── datasource/
             ├── model/
             └── repository/
     ```
 
-2. **Domain Layer:** This layer contains all the business logic of the application. It includes entities, use cases, and repositories interfaces. An example of a class in this layer is `UserRepositoryIml`.
+2. **Domain Layer**: Domain Entity with Domain Logic Layer. Contains business/domain logic, including entities, and repository interfaces.
 
     ```
     lib/
     └── feature/
         └── domain/
             ├── entity/
-            ├── usecase/
             └── repository/
     ```
 

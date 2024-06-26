@@ -3,7 +3,7 @@ import 'package:injectable/injectable.dart';
 
 import '../../../core/core.dart';
 import '../../domain/domain.dart';
-import '../data.dart';
+import '../infrastructure.dart';
 
 @LazySingleton(as: UserRepository)
 class UserRepositoryIml extends UserRepository {
