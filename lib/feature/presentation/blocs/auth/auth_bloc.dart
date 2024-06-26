@@ -1,7 +1,7 @@
 import 'package:injectable/injectable.dart';
 
 import '../../../../core/core.dart';
-import '../../../domain/domain.dart';
+import '../../../application/application.dart';
 import 'auth.dart';
 
 @injectable

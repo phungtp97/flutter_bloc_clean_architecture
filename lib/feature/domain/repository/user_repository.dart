@@ -5,39 +5,14 @@ import '../../../core/core.dart';
 import '../../data/data.dart';
 import '../domain.dart';
 
-@LazySingleton(as: UserRepository)
-class UserRepositoryIml extends UserRepository {
-  final UserRemoteDataSource userRemoteDataSource;
-  UserRepositoryIml({
-    required this.userRemoteDataSource,
-  });
+import 'package:dartz/dartz.dart';
 
-  @override
-  Future<Either<Failure, UserEntity>> login(
-      String username, String password) async {
-    final either = await userRemoteDataSource.login(username, password);
-    return either.fold(
-      (l) => Left(l),
-      (r) => Right(UserEntity.fromModel(r)),
-    );
-  }
+import '../../../core/core.dart';
+import '../../domain/domain.dart';
 
-  @override
-  Future<Either<Failure, UserEntity>> register(
-      String username, String password) async {
-    final either = await userRemoteDataSource.register(username, password);
-    return either.fold(
-      (l) => Left(l),
-      (r) => Right(UserEntity.fromModel(r)),
-    );
-  }
+abstract class UserRepository {
+  Future<Either<Failure, UserEntity>> login(String username, String password);
+  Future<Either<Failure, UserEntity>> register(String username, String password);
 
-  @override
-  Future<Either<Failure, UserEntity>> getMe() async {
-    final either = await userRemoteDataSource.getMe();
-    return either.fold(
-      (l) => Left(l),
-      (r) => Right(UserEntity.fromModel(r)),
-    );
-  }
+  Future<Either<Failure, UserEntity>> getMe();
 }

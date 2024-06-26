@@ -2,7 +2,7 @@ import 'package:dartz/dartz.dart';
 import 'package:injectable/injectable.dart';
 
 import '../../../../core/core.dart';
-import '../../domain.dart';
+import '../../../domain/domain.dart';
 
 @injectable
 class SetLocale extends UseCase<bool, String> {

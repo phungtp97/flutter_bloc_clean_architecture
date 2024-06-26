@@ -1,8 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:injectable/injectable.dart';
 import '../../../../core/core.dart';
-import '../../../data/data.dart';
-import '../../domain.dart';
+import '../../../domain/domain.dart';
 
 @injectable
 class RegisterUser implements UseCase<UserEntity, RegisterUserParams> {

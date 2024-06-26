@@ -5,7 +5,6 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
 import 'package:rxdart/rxdart.dart';
-import '../command/command.dart';
 import '../core.dart';
 class BaseBloc<S extends Equatable> extends Cubit<S> {
   BaseBloc(super.initialState);
