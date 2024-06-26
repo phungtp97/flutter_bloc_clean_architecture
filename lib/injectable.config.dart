@@ -11,6 +11,10 @@
 import 'package:dio/dio.dart' as _i3;
 import 'package:flutter_bloc_arch/core/module/register_module.dart' as _i20;
 import 'package:flutter_bloc_arch/feature/application/application.dart' as _i17;
+import 'package:flutter_bloc_arch/feature/application/blocs/app/app_bloc.dart'
+    as _i19;
+import 'package:flutter_bloc_arch/feature/application/blocs/auth/auth_bloc.dart'
+    as _i16;
 import 'package:flutter_bloc_arch/feature/application/usecase/locale/get_locale.dart'
     as _i18;
 import 'package:flutter_bloc_arch/feature/application/usecase/locale/set_locale.dart'
@@ -33,10 +37,6 @@ import 'package:flutter_bloc_arch/feature/data/repository/user_repository_iml.da
 import 'package:flutter_bloc_arch/feature/domain/domain.dart' as _i6;
 import 'package:flutter_bloc_arch/feature/domain/repository/local_repository.dart'
     as _i11;
-import 'package:flutter_bloc_arch/feature/presentation/blocs/app/app_bloc.dart'
-    as _i19;
-import 'package:flutter_bloc_arch/feature/presentation/blocs/auth/auth_bloc.dart'
-    as _i16;
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart' as _i2;
 import 'package:shared_preferences/shared_preferences.dart' as _i4;
